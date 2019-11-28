@@ -1,0 +1,20 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+  {{test}}
+</p>
+  <p [innerHTML]='test' [style.font-size.px]="50" [ngClass]='appystyles()'> test</p>
+  <input type='text' [value]='test' (input)='test = $event.target.value'>
+
+  <input type='text' [(ngModel)]='test'>
+
+  <input type='text' [(ngModel)]='switchtest'>
+
+  <div [ngSwitch]="switchtest">
+<p *ngSwitchCase="1">Selected 1</p>
+<p *ngSwitchCase="2">Selected 2</p>
+<p *ngSwitchCase="3">Selected 3</p>
+<p *ngSwitchCase="4">selected 4</p>
+    </div>
+
+
